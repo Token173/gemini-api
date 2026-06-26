@@ -60,12 +60,12 @@ Token173聚合中转API是一个高效的Open AI、Midjourney API代理、Claude
 
 1. 注册账号，免费体验，注册即送0.2美金额度
 2. 前往[令牌页](/token)，添加令牌
-3. 修改应用 BASE_URL为中转接口调用地址： https://www.token173.com  设置 API Key 为添加的令牌
+3. 修改应用 BASE_URL为中转接口调用地址： https://www.token173.net  设置 API Key 为添加的令牌
 
 不同的客户端需要填写不同的BASE_URL, 请尝试如下地址  
-https://www.token173.com  
-https://www.token173.com/v1  
-https://www.token173.com/v1/chat/completions  
+https://www.token173.net  
+https://www.token173.net/v1  
+https://www.token173.net/v1/chat/completions  
 
 模型名在[首页](/) -> 支持模型中的第一列 模型 中   
 可在[聊天页](/chat) 进行测试或使用
@@ -74,7 +74,7 @@ https://www.token173.com/v1/chat/completions
 
 ### Midjourney 接入教程
 
-Midiourney-Proxy主机：https://www.token173.com
+Midiourney-Proxy主机：https://www.token173.net
 
 Midiourney-Proxy Secret ：自己后台生成的令牌
 
@@ -90,7 +90,7 @@ Midiourney-Proxy Secret ：自己后台生成的令牌
 /mj-fast/mj 是 fast mode   
 /mj-turbo/mj 是 turbo mode   
 /mj-relax/mj 是 relax mode   
-例如： https://www.token173.com/
+例如： https://www.token173.net/
 2. prompt 中通过 mj 参数指定： --relax\--fast\--turbo
 
 切换 MJ 返回的图片地址：
@@ -99,7 +99,7 @@ Midiourney-Proxy Secret ：自己后台生成的令牌
 /mj-{mode}-relay/mj 是使用服务转发地址，图片国内访问较快   
 /mj-{mode}-origin/mj 是使用discord 原地址，图片国外访问很快   
 /mj-{mode}-proxy/mj 是使用管理员设置的代理地址，图片国内访问较快  
-例如： https://www.token173.com/mj-turbo-relay/mj/submit/imagine
+例如： https://www.token173.net/mj-turbo-relay/mj/submit/imagine
 
 
 
@@ -128,13 +128,13 @@ Midiourney-Proxy Secret ：自己后台生成的令牌
 
 ### **python openai官方库（使用AutoGPT，langchain等）**
 
-示例代码请参考[demo.py](https://www.token173.com/)
+示例代码请参考[demo.py](https://www.token173.net/)
 
 ***方法一***
 
 ```python
 import openai
-openai.api_base = "https://www.token173.com/v1"
+openai.api_base = "https://www.token173.net/v1"
 ```
 
 ***方法二（方法一不起作用用这个）***
@@ -142,7 +142,7 @@ openai.api_base = "https://www.token173.com/v1"
 修改环境变量OPENAI_API_BASE，各个系统怎么改环境变量请自行搜索，修改环境变量后不起作用请重启系统。
 
 ```sh
-OPENAI_API_BASE=https://www.token173.com/v1
+OPENAI_API_BASE=https://www.token173.net/v1
 ```
 
 
@@ -151,7 +151,7 @@ OPENAI_API_BASE=https://www.token173.com/v1
 找到`config.py`文件中的`API_URL_REDIRECT`配置并修改为以下内容：
 
 ```python
-API_URL_REDIRECT = {"https://api.openai.com/v1/chat/completions": "https://www.token173.com/v1/chat/completions"}
+API_URL_REDIRECT = {"https://api.openai.com/v1/chat/completions": "https://www.token173.net/v1/chat/completions"}
 ```
 
 ## 常见问题
