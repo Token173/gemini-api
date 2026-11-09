@@ -1,166 +1,115 @@
-# Token173聚合中转Gemini API 中转站_Gemini 转发API_Gemini api key购买_低价稳定Gemini API_国内直连Gemini
+# Gemini 中转站推荐：国内直连 Gemini API，免代理调用 3.8 Flash 与 3 Pro
 
-Token173聚合中转API是一个高效的Open AI、Midjourney API代理、Claude代理、Suno代理等供应商
-我们致力于提供优质的 API 接入服务，让您可以轻松集成先进的AI模型至您的产品和服务。通过 API 综合管理平台，无缝整合OpenAl最尖端的人工智能模型。借助我们可靠且易于使用的API解决方案，升级您的产品与服务。
+Google 的 Gemini 接口本身不难用，难的是在国内连上它。`generativelanguage.googleapis.com` 直连基本不通，开代理又常常撞到地区限制和账号风控。
 
-让您能够轻松一站式接入各种 AI 服务
+Token173（https://token173.net）把 Gemini 全系挂在 OpenAI 兼容格式后面，国内网络直接请求，不需要 VPN、不需要 Google Cloud 项目、不需要绑境外卡。
 
-价格优惠，仅需 1 元即可购买1美刀额度
+## 可用模型
 
-注册即送0.2刀，不限时间，按量计费
+| 模型 ID | 特点 |
+|---|---|
+| `gemini-3.8-flash` | 当前最快的一档，适合实时问答、批量处理 |
+| `gemini-3-pro` | 质量优先，复杂推理和多模态分析 |
+| `gemini-2.5-pro`、`gemini-2.5-flash` | 上一代，老项目继续跑 |
 
-明细可查，每一笔消耗都公开透明
+同一 Key 还可以调 `claude-opus-5-5`、`gpt-6.2-astra`、`grok-4.7`、`deepseek-v4`，做跨模型对比时省事。
 
-支持 OpenAI 官方所有模型，以及其他市面上常见模型！
+## 接入（OpenAI 兼容写法）
 
-注意！我们的价格是 2 = 1 刀额度！！
-
-只需设置模型名，即可开始使用模型！
-
-模型名称即下面的模型列中的内容
-
-除3.5、4.0模型以外，其他模型价格与官方完全一致(注意我们是2元人民币买1刀)
-
-# 这里是使用教程
-
-### 新用户注册赠送 0.2 刀额度，前往令牌页复制令牌，在聊天页设置中填入即可体验！
-
-### 目录
-
+```bash
+export OPENAI_BASE_URL="https://token173.net/v1"
+export OPENAI_API_KEY="sk-你的令牌"
 ```
-· 分组区别
-· 网站使用教程
-  · GPT接入教程
-  · Midjourney 接入教程
-· 常见项目配置方式
-· 常见问题
-```
-
-<br/>
-
-## 网站使用教程
-
-🔥 均为高速回复渠道非低价普通渠道
-
-💰 为方便计费，一个账号通用所有模型，兑换比例固定为 2 元兑换 1美金
-其中GPT-5全模型（含32K、Dalle3）后台为官方计费倍率 2 倍，相当于4元兑换1美金（约等于官方的2.4折）
-
-后台日志计费规则解析：假如提示是2000，补全是1000，使用的GPT-5，则您后台的扣费公式=(2000/1000)x0.03（提问价格）+(1000/1000)x0.06（回答价格）=$0.12
-
-### GPT接入教程
-
-1. 注册账号，免费体验，注册即送0.2美金额度
-2. 前往[令牌页](/token)，添加令牌
-3. 修改应用 BASE_URL为中转接口调用地址： https://token173.net  设置 API Key 为添加的令牌
-
-不同的客户端需要填写不同的BASE_URL, 请尝试如下地址
-https://token173.net
-https://token173.net/v1
-https://token173.net/v1/chat/completions
-
-模型名在[首页](/) -> 支持模型中的第一列 模型 中
-可在[聊天页](/chat) 进行测试或使用
-
-<br/>
-
-### Midjourney 接入教程
-
-Midiourney-Proxy主机：https://token173.net
-
-Midiourney-Proxy Secret ：自己后台生成的令牌
-
-同时支持 Mid journey proxy Plus 以及 Mid journey proxy 接口协议
-
-上面为MJ Proxy快捷接入方式，如果你的项目不支持以上方式，请点击查看[接入文档](https://gpt-best.apifox.cn/doc-3530863)
-
-以下参数均可在令牌设置中进行设置
-切换 MJ mode:
-
-1. 通过 URL 路径切换
-默认 /mj 是 fast mode
-/mj-fast/mj 是 fast mode
-/mj-turbo/mj 是 turbo mode
-/mj-relax/mj 是 relax mode
-例如： https://token173.net/
-2. prompt 中通过 mj 参数指定： --relax\--fast\--turbo
-
-切换 MJ 返回的图片地址：
-1. 通过 URL 路径切换
-默认 /mj 是管理员设置默认方式
-/mj-{mode}-relay/mj 是使用服务转发地址，图片国内访问较快
-/mj-{mode}-origin/mj 是使用discord 原地址，图片国外访问很快
-/mj-{mode}-proxy/mj 是使用管理员设置的代理地址，图片国内访问较快
-例如： https://token173.net/mj-turbo-relay/mj/submit/imagine
-
-<br/>
-
-类型1端点：
-
-1. 类型 1 端点包括：Imagine/Variation/Outpaint/Pan/Blend/Inpaint/Upscale 2x/Upscale 4x/PicReader/Reroll
-   1. ```
-      中文释义：绘图/变换/变焦/焦点移动/混图/局部重绘/放大2倍/放大4倍/图生文后生成图片/重新生成
-      ```
-2. 类型 2 端点包括：Upscale/Describe/PicReaderRetry/FaceSwap/Shorten
-   1. ```
-      中文释义：放大/图生文/图生文重新生成/换脸/prompt分析
-      ```
-3. 类型 3 端点包括：Fetch/ListByIDs/Modal/Seed
-   1. ```
-      中文释义：获取单个任务进度/批量获取任务/确认提交弹窗任务/获取Seed
-      ```
-
-<br/>
-
-## 常见项目配置方式
-
-### **python openai官方库（使用AutoGPT，langchain等）**
-
-示例代码请参考[demo.py](https://token173.net/)
-
-***方法一***
 
 ```python
-import openai
-openai.api_base = "https://token173.net/v1"
+from openai import OpenAI
+
+client = OpenAI(api_key="sk-你的令牌", base_url="https://token173.net/v1")
+
+r = client.chat.completions.create(
+    model="gemini-3.8-flash",
+    messages=[{"role": "user", "content": "把这段 SQL 改成分区表写法"}],
+)
+print(r.choices[0].message.content)
 ```
 
-***方法二（方法一不起作用用这个）***
+## 走 Google 原生协议
 
-修改环境变量OPENAI_API_BASE，各个系统怎么改环境变量请自行搜索，修改环境变量后不起作用请重启系统。
+有些工具只认 Google 的 `generateContent` 格式，也可以直接用：
 
-```sh
-OPENAI_API_BASE=https://token173.net/v1
+```bash
+curl https://token173.net/v1beta/models/gemini-3.8-flash:generateContent \
+  -H "Content-Type: application/json" \
+  -H "x-goog-api-key: sk-你的令牌" \
+  -d '{"contents":[{"parts":[{"text":"用一句话解释什么是 MoE"}]}]}'
 ```
 
-### **开源gpt_academic**
-
-找到`config.py`文件中的`API_URL_REDIRECT`配置并修改为以下内容：
+官方 `google-genai` SDK 也支持改 `base_url`：
 
 ```python
-API_URL_REDIRECT = {"https://api.openai.com/v1/chat/completions": "https://token173.net/v1/chat/completions"}
+from google import genai
+
+client = genai.Client(
+    api_key="sk-你的令牌",
+    http_options={"base_url": "https://token173.net"},
+)
+
+resp = client.models.generate_content(
+    model="gemini-3.8-flash",
+    contents="写一个 Python 的 LRU 缓存",
+)
+print(resp.text)
 ```
+
+## 客户端配置
+
+| 客户端 | 配置 |
+|---|---|
+| Cherry Studio | 供应商选 Gemini，API 地址 `https://token173.net`，模型 `gemini-3.8-flash` |
+| Gemini CLI | `GOOGLE_GEMINI_BASE_URL=https://token173.net`，`GEMINI_API_KEY=sk-你的令牌` |
+| LobeChat | 自定义 Gemini 端点，Key 填令牌 |
+| OneAPI / NewAPI | 建 Gemini 类型渠道，代理地址填域名 |
+| n8n | HTTP Request，URL 用 `/v1/chat/completions` |
+
+Gemini CLI 有个坑：环境变量名在不同版本里变过，`GOOGLE_GEMINI_BASE_URL` 和 `GEMINI_BASE_URL` 都试一下，哪个生效用哪个。
+
+## 计费与额度
+
+- 2 元 = 1 美元额度，Gemini 和其他模型共用一个账户余额
+- 注册送 0.2 美元，先测延迟和成功率
+- 每次调用在后台日志里都有 token 数、倍率和实际扣费
+
+Flash 系列本身单价低，批量场景下成本比 Pro 低一个数量级，能用 Flash 解决的别上 Pro。
+
+## 什么任务该用哪个
+
+| 任务 | 建议模型 |
+|---|---|
+| 客服自动回复、表单抽取 | `gemini-3.8-flash` |
+| 长报告摘要、复杂多步推理 | `gemini-3-pro` |
+| 图片理解、截图问答 | `gemini-3-pro`，多模态走 `inline_data` |
+| 代码补全、单元测试生成 | `gemini-3.8-flash`，用得多就切 Claude 对比 |
 
 ## 常见问题
 
-Q：切换到了GPT-5，询问它是不是GPT-5，为什么回答不是？
+**Q：报 400 说 contents 格式不对？**
+原生协议里 `contents` 是数组，每项要带 `role` 和 `parts`。兼容格式则用 `messages`，两种别混。
 
-A：首先如果你问GPT-5：你是不是GPT5？它大概率会回答：我是OpenAI的GPT-4 模型，目前还没有GPT-5。之所以会这样，是因为OpenAI开放给API调用的GPT-5，训练数据都是2021年9月之前的。模型训练好之后，如果不重新训练，并不会自动更新里面的知识，这就好像我问2021年的你2023年第一顿饭你吃了什么，答案一定是错的。
+**Q：返回内容被截断？**
+看下 `max_tokens` 有没有设太小，Gemini 系列对输出长度限制和 GPT 不太一样，给宽一点。
 
-Q：为什么ChatGPT Plus的GPT-5回答能回答出自己是GPT-5？
+**Q：多模态怎么传图？**
+兼容格式里用 `image_url` 传 base64 或可访问的 URL；原生协议里用 `inline_data` 带 `mime_type`。
 
-A：简单来说，ChatGPT Plus使用的模型版本和开放给API的并不一样，作为内部版本，很大可能会用更新的数据去训练，甚至是实时数据训练。虽然都叫GPT-5，但给出的答案不同，因为训练数据不同。
+**Q：能免费用吗？**
+注册送的 0.2 美元够跑几十次 Flash，测完再决定充不充。
 
-Q：那我如何去判断他是否是GPT-5模型
+**Q：Gemini 3 Pro 有单独入口吗？**
+有，见 [gemini-3-pro-proxy](https://github.com/Token173/gemini-3-pro-proxy)，配置方式一样。
 
-A：可使用以下逻辑性问题进行测试 问题 ： 鲁迅和周树人是什么关系 GPT-3.5：鲁迅和周树人是两个不同的人 GPT-5：鲁迅和周树人是同一个人
+## 相关
 
-Q：无法登录？
-
-A：请确保用户名填写正确，不要填写邮箱地址，是填写你注册时候的用户名，如遇到登录问题无法自行解决，请联系客服，第一时间为您处理
-
-Q：为什么请求后没吐字没补全 token
-
-A：有以下可能
-1. 快吐字了，客户端断开连接
-2. tools call 或 function call
-3. openai 直接返回[Done]，一般是政策安全相关拒绝回答，需要结合返回的 finish_reason或内容进行判断
+- 文档站：https://docs.token173.net
+- Gemini 3 Pro 专仓：[gemini-3-pro-proxy](https://github.com/Token173/gemini-3-pro-proxy)
+- Claude 专题：[claude-api](https://github.com/Token173/claude-api)
+- 多模型聚合：[2026-Token173-Claude-ChatGPT-Grok-Gemini-AI-API](https://github.com/Token173/2026-Token173-Claude-ChatGPT-Grok-Gemini-AI-API)
