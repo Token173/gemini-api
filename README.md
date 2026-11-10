@@ -9,10 +9,10 @@ Token173（https://token173.net）把 Gemini 全系挂在 OpenAI 兼容格式后
 | 模型 ID | 特点 |
 |---|---|
 | `gemini-3.8-flash` | 当前最快的一档，适合实时问答、批量处理 |
-| `gemini-3-pro` | 质量优先，复杂推理和多模态分析 |
-| `gemini-2.5-pro`、`gemini-2.5-flash` | 上一代，老项目继续跑 |
+| `gemini-3-pro-preview` | 质量优先，复杂推理和多模态分析 |
+| `gemini-2.5-flash` | 上一代，老项目继续跑 |
 
-同一 Key 还可以调 `claude-opus-5-5`、`gpt-6.2-astra`、`grok-4.7`、`deepseek-v4`，做跨模型对比时省事。
+同一 Key 还可以调 `claude-opus-5-5`、`gpt-6-astra`、`grok-4.7`、`deepseek-v4-pro`，做跨模型对比时省事。
 
 ## 接入（OpenAI 兼容写法）
 
@@ -86,8 +86,8 @@ Flash 系列本身单价低，批量场景下成本比 Pro 低一个数量级，
 | 任务 | 建议模型 |
 |---|---|
 | 客服自动回复、表单抽取 | `gemini-3.8-flash` |
-| 长报告摘要、复杂多步推理 | `gemini-3-pro` |
-| 图片理解、截图问答 | `gemini-3-pro`，多模态走 `inline_data` |
+| 长报告摘要、复杂多步推理 | `gemini-3-pro-preview` |
+| 图片理解、截图问答 | `gemini-3-pro-preview`，多模态走 `inline_data` |
 | 代码补全、单元测试生成 | `gemini-3.8-flash`，用得多就切 Claude 对比 |
 
 ## 常见问题
