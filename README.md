@@ -9,6 +9,8 @@ Token173（https://token173.net）把 Gemini 全系挂在 OpenAI 兼容格式后
 | 模型 ID | 特点 |
 |---|---|
 | `gemini-3.8-flash` | 当前最快的一档，适合实时问答、批量处理 |
+| `gemini-4-carbon` | 最强一档，长任务、根因定位、代码审计；单价高、耗 token 多 |
+| `gemini-4-argon` | 上一档旗舰，覆盖面广，日常开发主力 |
 | `gemini-3-pro-preview` | 质量优先，复杂推理和多模态分析 |
 | `gemini-2.5-flash` | 上一代，老项目继续跑 |
 
